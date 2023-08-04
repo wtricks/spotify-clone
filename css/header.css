@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Poppins:wght@200;300;400;500;600&family=Roboto:wght@100&display=swap');
+
 *,
 ::after,
 ::before {
@@ -17,7 +19,9 @@ body {
     font-size: 14px;
     min-height: 100vh;
     display: flex;
+    font-family: 'Bruno Ace SC', cursive;
     font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: var(--white);;
 }
 
