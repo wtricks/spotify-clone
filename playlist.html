@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spotify Clone</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/favicon.0f31d2ea.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/header.css">
+</head>
+<body>
+    <header style="bottom: 80px">
+        <!-- Logo -->
+        <a href="/" class="logo" title="Spotify Clone">
+            <img src="./img/Spotify logo.png" alt="Spotify Clone" />
+        </a>
+
+        <!-- Navbar -->
+        <nav class="navbar" role="navigation">
+            <ul class="nav-links" role="menubar">
+                <li role="menuitem">
+                    <a href="/home" title="Home">
+                        <svg role="img" height="24" width="24" aria-hidden="true" class="Svg-sc-ytk21e-0 haNxPq home-active-icon" viewBox="0 0 24 24" data-encore-id="icon"><path d="M13.5 1.515a3 3 0 0 0-3 0L3 5.845a2 2 0 0 0-1 1.732V21a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6h4v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V7.577a2 2 0 0 0-1-1.732l-7.5-4.33z"></path></svg>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li role="menuitem">
+                    <a href="/search" title="Search">
+                        <svg role="img" height="24" width="24" aria-hidden="true" class="Svg-sc-ytk21e-0 haNxPq search-icon" viewBox="0 0 24 24" data-encore-id="icon"><path d="M10.533 1.279c-5.18 0-9.407 4.14-9.407 9.279s4.226 9.279 9.407 9.279c2.234 0 4.29-.77 5.907-2.058l4.353 4.353a1 1 0 1 0 1.414-1.414l-4.344-4.344a9.157 9.157 0 0 0 2.077-5.816c0-5.14-4.226-9.28-9.407-9.28zm-7.407 9.279c0-4.006 3.302-7.28 7.407-7.28s7.407 3.274 7.407 7.28-3.302 7.279-7.407 7.279-7.407-3.273-7.407-7.28z"></path></svg>
+                        <span>Search</span>
+                    </a>
+                </li>
+                <li role="menuitem">
+                    <a href="/library" title="Library">
+                        <svg role="img" height="24" width="24" aria-hidden="true" viewBox="0 0 24 24" data-encore-id="icon" class="Svg-sc-ytk21e-0 haNxPq"><path d="M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zM15.5 2.134A1 1 0 0 0 14 3v18a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6.464a1 1 0 0 0-.5-.866l-6-3.464zM9 2a1 1 0 0 0-1 1v18a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1z"></path></svg>
+                        <span>Library</span>
+                    </a>
+                </li>
+
+                <li class="divider" style="margin-bottom: 20px;margin-top: 30px;">PLAYLIST</li>
+
+                <li role="menuitem">
+                    <a href="/home" title="Create Playlist">
+                        <div class="icon-add icon">
+                            <img src="./img/Plus.png" alt="Create Playlist" />
+                        </div>
+                        <span>Create Playlist</span>
+                    </a>
+                </li>
+
+                <li role="menuitem">
+                    <a href="/home" title="Liked Songs">
+                        <div class="icon episode">
+                            <img src="./img/heart.png" alt="Create Playlist" />
+                        </div>
+                        <span>Liked Songs</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Current song picture -->
+        <img src="./img/album art.png" class="current" alt="Current song">
+    </header>
+    <main style="padding-left: 320px; padding-bottom: 81px; padding-right: 0;">
+       
+        <!-- Music palyer and its controlers -->
+        <section id="musicPlayer">
+            <div class="m-player">
+                <div class="song-info">
+                    <img src="./img/rectangle-20.png" alt="Song Name">
+                    <div class="song-name-p">
+                        <p>Dreaming On</p>
+                        <span>NEFFEX</span>
+                    </div>
+                    <svg width="18" height="18" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.5603 1.79111C16.0643 1.23583 15.4745 0.795006 14.8247 0.493993C14.175 0.192979 13.4781 0.037709 12.7742 0.0371094C11.4427 0.0373513 10.1599 0.593382 9.17964 1.59511C8.19951 0.593213 6.9166 0.0371559 5.58511 0.0371094C4.88036 0.0379251 4.18272 0.193669 3.53232 0.495378C2.88193 0.797087 2.29162 1.2388 1.79538 1.79511C-0.321215 4.15811 -0.320316 7.85411 1.79718 10.2071L9.17964 18.4141L16.5621 10.2071C18.6796 7.85411 18.6805 4.15811 16.5603 1.79111Z" fill="#C4C4C4"/>
+                    </svg>
+                    <svg style="margin-left:20px" width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.6582 18.0037H4.16522C3.80747 18.0033 3.46448 17.8451 3.21151 17.5639C2.95855 17.2827 2.81628 16.9014 2.81592 16.5037V6.00366C2.81628 5.60596 2.95855 5.22466 3.21151 4.94344C3.46448 4.66222 3.80747 4.50406 4.16522 4.50366H17.6582C18.0159 4.50406 18.3589 4.66222 18.6119 4.94344C18.8649 5.22466 19.0071 5.60596 19.0075 6.00366V16.5037C19.0069 16.9013 18.8646 17.2825 18.6117 17.5637C18.3588 17.8448 18.0159 18.0031 17.6582 18.0037ZM4.16522 6.00366V16.5037H17.6582V6.00366H4.16522Z" fill="#C4C4C4"/>
+                        <path d="M1.4668 19.5037H20.357V21.0037H1.4668V19.5037Z" fill="#C4C4C4"/>
+                    </svg>
+                </div>
+                <div class="controls">
+                    <div class="btns">
+                        <button type="button">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.3395 15.4905C15.876 15.3443 15.2843 14.9633 14.622 14.3003C14.0535 13.7438 13.467 13.0268 12.867 12.2453C12.723 12.4365 12.5798 12.6278 12.4358 12.8228C12.0435 13.3538 11.6423 13.89 11.2335 14.4173C12.6615 16.1498 14.1435 17.8508 16.341 18.1313V20.1563L22.0073 16.8863L16.3403 13.614V15.4905H16.3395ZM6.89401 8.95053C7.46101 9.50553 8.04751 10.2225 8.64901 11.004C8.79451 10.8075 8.94151 10.614 9.08851 10.413C9.48034 9.8809 9.87836 9.35337 10.2825 8.83053C8.75851 6.98253 7.18276 5.15028 4.73551 5.06253H2.11051V7.68753H4.73551C5.22676 7.66728 5.99701 8.05128 6.89401 8.94978V8.95053ZM16.3395 7.75578V9.65778L22.0065 6.38553L16.3395 3.11328V5.09853C14.9115 5.26353 13.7708 6.10953 12.777 7.08153C11.1293 8.71953 9.68926 10.9575 8.26801 12.7365C6.86776 14.5643 5.46301 15.6518 4.73401 15.564H2.10901V18.189H4.73401C6.37276 18.1665 7.64401 17.2395 8.73901 16.1693C10.3845 14.5313 11.826 12.294 13.2465 10.5158C14.4038 9.00303 15.5595 8.01078 16.3395 7.75578Z" fill="#C4C4C4"/>
+                            </svg>
+                        </button>
+                        <button type="button">
+                            <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.6666 9.04175L11.625 15.5001L20.6666 21.9584V9.04175ZM11.625 15.5001V9.04175H9.04163V21.9584H11.625V15.5001Z" fill="#C4C4C4"/>
+                            </svg>    
+                        </button>
+                        <button type="button" class="play-btn">
+                            <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M25.5 4.25C21.2972 4.25 17.1887 5.49629 13.6941 7.83127C10.1996 10.1663 7.47593 13.485 5.86757 17.368C4.25921 21.2509 3.83839 25.5236 4.65832 29.6457C5.47826 33.7678 7.50212 37.5542 10.474 40.526C13.4459 43.4979 17.2322 45.5218 21.3543 46.3417C25.4764 47.1616 29.7491 46.7408 33.632 45.1324C37.515 43.5241 40.8338 40.8004 43.1687 37.3059C45.5037 33.8113 46.75 29.7029 46.75 25.5C46.75 22.7094 46.2004 19.9461 45.1325 17.368C44.0645 14.7898 42.4993 12.4472 40.526 10.474C38.5528 8.50074 36.2102 6.93547 33.632 5.86756C31.0539 4.79965 28.2906 4.25 25.5 4.25ZM21.3543 32.5V17.381L33 25.5L21.3543 32.5Z" fill="white"/>
+                            </svg>
+                        </button>
+                        <button type="button">
+                            <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.3334 9.04175L19.375 15.5001L10.3334 21.9584V9.04175ZM19.375 15.5001V9.04175H21.9584V21.9584H19.375V15.5001Z" fill="#C4C4C4"/>
+                            </svg>    
+                        </button>
+                        <button type="button">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18.15 7.33817C18.2776 7.33817 18.3953 7.38217 18.4888 7.45587L18.5625 7.52517L18.5812 7.54717C19.2202 8.33923 19.627 9.29309 19.7562 10.3026C19.8854 11.3121 19.732 12.3376 19.313 13.2651C18.894 14.1926 18.2259 14.9856 17.383 15.556C16.5401 16.1263 15.5554 16.4516 14.5387 16.4957L14.3 16.5001H7.69996C7.58879 16.5001 7.47764 16.4968 7.36666 16.4902L9.18936 18.3107C9.2803 18.4018 9.33639 18.522 9.34785 18.6502C9.3593 18.7785 9.32541 18.9067 9.25206 19.0125L9.18936 19.0895C9.09822 19.1804 8.97806 19.2365 8.84982 19.248C8.72158 19.2594 8.59338 19.2255 8.48756 19.1522L8.41056 19.0895L5.66056 16.3395C5.56962 16.2483 5.51353 16.1282 5.50208 15.9999C5.49062 15.8717 5.52452 15.7435 5.59786 15.6377L5.66056 15.5607L8.41056 12.8107C8.50757 12.7132 8.63756 12.6557 8.77491 12.6493C8.91226 12.6429 9.04701 12.6883 9.1526 12.7763C9.2582 12.8644 9.32698 12.9888 9.34539 13.1251C9.3638 13.2613 9.3305 13.3995 9.25206 13.5125L9.18936 13.5895L7.38866 15.3891L7.54266 15.3979L7.69996 15.4001H14.3C15.1309 15.4001 15.9448 15.1649 16.6476 14.7217C17.3504 14.2784 17.9134 13.6452 18.2713 12.8953C18.6292 12.1454 18.7674 11.3095 18.6701 10.4844C18.5727 9.65917 18.2436 8.87843 17.721 8.23247C17.6564 8.1516 17.6159 8.05414 17.6043 7.95131C17.5926 7.84848 17.6102 7.74444 17.655 7.65115C17.6998 7.55786 17.77 7.4791 17.8576 7.42393C17.9451 7.36876 18.0465 7.33942 18.15 7.33927V7.33817ZM12.8106 2.91067C12.9017 2.81973 13.0219 2.76364 13.1501 2.75218C13.2783 2.74073 13.4065 2.77462 13.5124 2.84797L13.5894 2.91067L16.3394 5.66067L16.4021 5.73767C16.4654 5.82952 16.4994 5.93847 16.4994 6.05007C16.4994 6.16166 16.4654 6.27062 16.4021 6.36247L16.3394 6.43947L13.5894 9.18947L13.5124 9.25217C13.4205 9.31556 13.3116 9.3495 13.2 9.3495C13.0884 9.3495 12.9794 9.31556 12.8876 9.25217L12.8106 9.18947L12.7479 9.11247C12.6845 9.02062 12.6505 8.91166 12.6505 8.80007C12.6505 8.68847 12.6845 8.57952 12.7479 8.48767L12.8106 8.41067L14.6113 6.61107L14.4573 6.60227L14.3 6.60007H7.69996C6.86834 6.60002 6.05373 6.83565 5.35055 7.27965C4.64737 7.72365 4.08442 8.35784 3.72694 9.10872C3.36946 9.85959 3.2321 10.6964 3.33078 11.5221C3.42945 12.3479 3.76012 13.1288 4.28446 13.7743C4.37213 13.8911 4.40979 14.038 4.38916 14.1826C4.36853 14.3272 4.2913 14.4577 4.17446 14.5454C4.11661 14.5888 4.05077 14.6204 3.98071 14.6383C3.91065 14.6563 3.83773 14.6603 3.76613 14.6501C3.62152 14.6294 3.49103 14.5522 3.40336 14.4354C2.76869 13.6421 2.36614 12.6885 2.24033 11.6805C2.11453 10.6724 2.2704 9.64912 2.69065 8.7242C3.1109 7.79928 3.77911 7.00883 4.62119 6.44051C5.46326 5.87219 6.44629 5.5482 7.46126 5.50447L7.69996 5.50007H14.3C14.4122 5.50007 14.5233 5.50337 14.6333 5.50997L12.8106 3.68947L12.7479 3.61247C12.6745 3.50665 12.6406 3.37845 12.6521 3.25021C12.6635 3.12197 12.7196 3.00181 12.8106 2.91067Z" fill="#C4C4C4"/>
+                            </svg>                                   
+                        </button>
+                    </div>
+                    <div class="progress-bar">
+                        <span>1:02</span>
+                        <div style="--progress: 50%"></div>
+                        <span>02:00</span>
+                    </div>
+                </div>
+                <div class="extra">
+                    <button type="button">
+                        <svg width="30" height="32" viewBox="0 0 30 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.73438 19H25.9259V21H9.73438V19Z" fill="#C4C4C4"/>
+                            <path d="M17.8301 14H25.9259V16H17.8301V14Z" fill="#C4C4C4"/>
+                            <path d="M9.73438 24H25.9259V26H9.73438V24Z" fill="#C4C4C4"/>
+                            <path d="M9.73438 9L15.1316 13.5L9.73438 18V9Z" fill="#C4C4C4"/>
+                        </svg>
+                    </button>
+                    <button type="button">
+                        <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="8.82275" y="1" width="8" height="12" rx="0.5" stroke="white"/>
+                            <circle cx="12.8228" cy="8.5" r="1.5" stroke="white"/>
+                            <circle cx="12.8228" cy="3.5" r="0.5" stroke="white"/>
+                            <path d="M5.9751 0.855469H1.67676C1.12447 0.855469 0.676758 1.30318 0.676758 1.85547V9.19049C0.676758 9.74278 1.12447 10.1905 1.67676 10.1905H5.9751" stroke="white"/>
+                            <line x1="3.35107" y1="12.9199" x2="5.9751" y2="12.9199" stroke="white"/>
+                        </svg> 
+                    </button>
+                    <button type="button">
+                        <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.6922 4.24988C13.6922 3.17088 12.5462 2.59988 11.8212 3.31588L7.77958 7.30888C7.65622 7.43106 7.49683 7.49866 7.33161 7.49888H4.02224C3.48545 7.49888 2.97065 7.73594 2.59109 8.15789C2.21153 8.57985 1.99829 9.15215 1.99829 9.74888V14.2459C1.99829 14.8426 2.21153 15.4149 2.59109 15.8369C2.97065 16.2588 3.48545 16.4959 4.02224 16.4959H7.33251C7.49772 16.4961 7.65712 16.5637 7.78048 16.6859L11.8203 20.6799C12.5453 21.3959 13.6922 20.8239 13.6922 19.7459V4.24988ZM8.67731 8.42988L12.3429 4.80688V19.1889L8.67731 15.5649C8.30687 15.1985 7.82834 14.996 7.33251 14.9959H4.02224C3.84331 14.9959 3.67171 14.9169 3.54519 14.7762C3.41867 14.6356 3.34759 14.4448 3.34759 14.2459V9.74988C3.34759 9.55097 3.41867 9.36021 3.54519 9.21955C3.67171 9.0789 3.84331 8.99988 4.02224 8.99988H7.33251C7.82834 8.99974 8.30687 8.79727 8.67731 8.43088V8.42988Z" fill="#B3B3B3"/>
+                            <path d="M17.2832 5.89678C17.3545 5.83821 17.4354 5.79581 17.5214 5.772C17.6073 5.74819 17.6967 5.74344 17.7843 5.75802C17.8719 5.7726 17.9561 5.80622 18.032 5.85697C18.108 5.90771 18.1742 5.97459 18.2269 6.05378C19.3739 7.77367 19.9919 9.85873 19.989 11.9998C19.9915 14.1409 19.3733 16.226 18.226 17.9458C18.1173 18.0985 17.9594 18.1983 17.7857 18.2239C17.6121 18.2496 17.4363 18.1991 17.2955 18.0833C17.1546 17.9674 17.0599 17.7952 17.0313 17.6031C17.0026 17.4109 17.0424 17.2139 17.142 17.0538C18.1173 15.5921 18.6425 13.8197 18.6397 11.9998C18.6425 10.1799 18.1173 8.40747 17.142 6.94578C17.0893 6.86659 17.0512 6.77664 17.0298 6.68107C17.0084 6.5855 17.0041 6.48617 17.0172 6.38876C17.0303 6.29135 17.0606 6.19777 17.1062 6.11335C17.1519 6.02894 17.212 5.95535 17.2832 5.89678Z" fill="#B3B3B3"/>
+                            <path d="M15.6198 8.36978C15.6977 8.32281 15.7832 8.29336 15.8713 8.28312C15.9595 8.27287 16.0486 8.28204 16.1335 8.31008C16.2185 8.33813 16.2976 8.3845 16.3665 8.44657C16.4353 8.50863 16.4924 8.58515 16.5347 8.67178C17.0168 9.66178 17.2903 10.7968 17.2903 11.9998C17.2918 13.1618 17.032 14.3058 16.5347 15.3278C16.4495 15.5028 16.3053 15.6331 16.1337 15.6899C15.9621 15.7467 15.7773 15.7255 15.6198 15.6308C15.4624 15.5361 15.3452 15.3758 15.2941 15.185C15.243 14.9943 15.2621 14.7888 15.3473 14.6138C15.7251 13.8368 15.941 12.9478 15.941 11.9998C15.941 11.0518 15.7251 10.1628 15.3473 9.38578C15.3051 9.29911 15.2786 9.20405 15.2695 9.10603C15.2603 9.008 15.2686 8.90893 15.294 8.81448C15.3193 8.72003 15.3611 8.63205 15.417 8.55557C15.4729 8.4791 15.5418 8.41562 15.6198 8.36878V8.36978Z" fill="#B3B3B3"/>
+                        </svg>
+                    </button>
+                    <div class="progress" style="--progress: 40%"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Playlist Detail Page content -->
+        <section id="playlistDetail">
+            <div class="show-case">
+               <div class="inner">
+                    <img src="./img/pop.png" alt="Song Picture">
+                    <div class="related-info">
+                        <p class="top">PLaylist</p>
+                        <h2>Pop Right Now</h2>
+                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus</p>
+                        <p class="extra"><b>Spotify</b>.<span>860,305 likes</span>. <span>100 songs, 5 hr 5 min</span></p>
+                    </div>
+               </div>
+            </div>
+            <div class="show-ctrls">
+                <button type="button">
+                    <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 27.5C0 12.3122 12.3122 0 27.5 0C42.6878 0 55 12.3122 55 27.5C55 42.6878 42.6878 55 27.5 55C12.3122 55 0 42.6878 0 27.5Z" fill="#1DB954"/>
+                        <path d="M39 27.5L21 17V38L39 27.5Z" fill="white"/>
+                    </svg>
+                </button>
+                <button type="button">
+                    <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.7" d="M22.3027 13.4342C19.3015 10.433 14.4355 10.433 11.4342 13.4342V13.4342C8.433 16.4355 8.433 21.3015 11.4342 24.3027L22.3735 35.242C22.9957 35.8641 24.0043 35.8641 24.6265 35.242L35.5658 24.3027C38.567 21.3015 38.567 16.4355 35.5658 13.4342V13.4342C32.5645 10.433 27.6985 10.433 24.6973 13.4342L23.5 14.6315L22.3027 13.4342Z" stroke="white" stroke-linejoin="round"/>
+                    </svg>   
+                </button>
+                <button type="button">
+                    <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g opacity="0.7">
+                        <circle cx="13.125" cy="23.125" r="2.125" fill="white"/>
+                        <circle cx="23.375" cy="23.125" r="2.125" fill="white"/>
+                        <circle cx="33.625" cy="23.125" r="2.125" fill="white"/>
+                        </g>
+                    </svg>    
+                </button>
+            </div>
+        </section>
+
+        <!-- Browse Section content -->
+        <section id="browse">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="text-align: left;"># title</th>
+                        <th>Album</th>
+                        <th style="text-align: right;">date added</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="inner">
+                                <span>1.</span>
+                                <img src="./img/card-img3.png" alt="Image">
+                                <div>
+                                    <h6>We're Good</h6>
+                                    <p>Dua Lipa</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="last">Future Nostalgia (The Moonlight Edition)</td>
+                        <td class="last">4일 전</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="inner">
+                                <span>2.</span>
+                                <img src="./img/card-img1.png" alt="Image">
+                                <div>
+                                    <h6>We're Good</h6>
+                                    <p>Dua Lipa</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="last">Future Nostalgia (The Moonlight Edition)</td>
+                        <td class="last">4일 전</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="inner">
+                                <span>3.</span>
+                                <img src="./img/card-img1.png" alt="Image">
+                                <div>
+                                    <h6>We're Good</h6>
+                                    <p>Dua Lipa</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="last">Future Nostalgia (The Moonlight Edition)</td>
+                        <td class="last">4일 전</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="inner">
+                                <span>4.</span>
+                                <img src="./img/card-img1.png" alt="Image">
+                                <div>
+                                    <h6>We're Good</h6>
+                                    <p>Dua Lipa</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="last">Future Nostalgia (The Moonlight Edition)</td>
+                        <td class="last">4일 전</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="inner">
+                                <span>5.</span>
+                                <img src="./img/card-img1.png" alt="Image">
+                                <div>
+                                    <h6>We're Good</h6>
+                                    <p>Dua Lipa</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="last">Future Nostalgia (The Moonlight Edition)</td>
+                        <td class="last">4일 전</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="inner">
+                                <span>6.</span>
+                                <img src="./img/card-img1.png" alt="Image">
+                                <div>
+                                    <h6>We're Good</h6>
+                                    <p>Dua Lipa</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="last">Future Nostalgia (The Moonlight Edition)</td>
+                        <td class="last">4일 전</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="inner">
+                                <span>7.</span>
+                                <img src="./img/card-img1.png" alt="Image">
+                                <div>
+                                    <h6>We're Good</h6>
+                                    <p>Dua Lipa</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="last">Future Nostalgia (The Moonlight Edition)</td>
+                        <td class="last">4일 전</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>
